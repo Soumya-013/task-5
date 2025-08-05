@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloggerrs.com - Simple Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">bloggerrs.com</h1>
+            <p class="tagline">Simple blogging, beautiful stories</p>
+        </header>
+
+        <button class="admin-btn" onclick="toggleAdmin()">
+            Admin: <span id="admin-status">OFF</span>
+        </button>
+
+        <div class="blog-post">
+            <h1 class="post-title">Welcome to Our Blog!</h1>
+            <div class="post-date">Posted on August 5, 2025</div>
+            <div class="post-content">
+                <p>Welcome to bloggerrs.com! This is a simple and beautiful place where stories come to life. We believe
+                    in the power of words to connect people and share experiences.</p>
+                <p>Feel free to read our posts and join the conversation by leaving your thoughts in the comments
+                    section below. We love hearing from our readers!</p>
+            </div>
+        </div>
+
+        <div class="comments-section">
+            <h2 class="comments-title">Comments</h2>
+
+            <form class="comment-form" id="comment-form">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="comment">Your Comment:</label>
+                    <textarea id="comment" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Post Comment</button>
+            </form>
+
+            <div id="comments-list">
+                <div class="comment">
+                    <div class="comment-header">
+                        <span class="comment-author">Rahul Kumar</span>
+                        <div>
+                            <span class="comment-date">1 hour ago</span>
+                            <button class="delete-btn" onclick="deleteComment(this)">Delete</button>
+                        </div>
+                    </div>
+                    <div class="comment-text">Great blog! Looking forward to reading more posts.</div>
+                </div>
+
+                <div class="comment">
+                    <div class="comment-header">
+                        <span class="comment-author">Sneha Gupta</span>
+                        <div>
+                            <span class="comment-date">3 hours ago</span>
+                            <button class="delete-btn" onclick="deleteComment(this)">Delete</button>
+                        </div>
+                    </div>
+                    <div class="comment-text">Simple and clean design. I love the pastel colors!</div>
+                </div>
+
+                <div class="comment">
+                    <div class="comment-header">
+                        <span class="comment-author">Amit Verma</span>
+                        <div>
+                            <span class="comment-date">5 hours ago</span>
+                            <button class="delete-btn" onclick="deleteComment(this)">Delete</button>
+                        </div>
+                    </div>
+                    <div class="comment-text">Nice work on the blog. Keep it up!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
